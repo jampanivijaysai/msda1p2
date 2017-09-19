@@ -1,0 +1,76 @@
+{% extends 'portfolio/base.html' %}
+{% load staticfiles %}
+{% block content %}
+            {% if user.is_authenticated %}
+                <div class="page-container">
+                    <p> <br></p>
+                    <h2 class="top-menu">Welcome {{ user.username }}!</h2>
+                    <p> <br></p>
+
+                </div>
+            {% endif %}
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="links">
+                            <!-- Example row of columns -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/pic1.jpg" %}" alt="customer"/>
+                                        <div class="caption">
+                                            <h2>Customer</h2>
+                                            <p>We see our success in our customers success, it gives us an immense
+                                                pleasure when our
+                                                advises
+                                                turn out to be fruitful. </p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:customer_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/pic2.jpg" %}" alt="non-stock"/>
+                                        <div class="caption">
+                                            <h2>Non-Stock Investments</h2>
+                                            <p>Our team also provides advises for Non-Stock investments.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:investment_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/pic3.jpg" %}" alt="stocks"/>
+                                        <div class="caption">
+                                            <h2>Stock Portfolio</h2>
+                                            <p>Our Stock portfolios vary across industries driving exceptional profits. Check them out.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'portfolio:stock_list' %}"
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/pic4.jpg" %}" alt="non-stock"/>
+                                        <div class="caption">
+                                            <h2>Social Newtorking</h2>
+                                            <p>We are social bees just like you. Find us on social Networking.</p>
+                                            <p><a class="btn btn-primary" href="https://www.instagram.com/jampanivijaysai/"
+                                                  role="button">View
+                                                  profile &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+    </html>
+{% endblock %}
